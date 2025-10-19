@@ -1,0 +1,46 @@
+name: SSPlugin
+main: com.blussful.ssplugin.SSPlugin
+version: 1.0
+api-version: 1.20
+
+commands:
+  ss:
+    description: Вызвать/снять игрока с проверки
+    usage: /ss <player> [-a]
+    permission: bl.ss
+  ssstop:
+    description: Остановить таймер проверки игрока
+    usage: /ssstop <player>
+    permission: bl.ssstop
+  sspos:
+    description: Установить позицию проверки
+    usage: /sspos
+    permission: bl.ss.setpos
+  ssmsg:
+    description: Включить/выключить сообщения от проверяемых
+    usage: /ssmsg
+    permission: bl.ssmsg
+  ssreload:
+    description: Перезагрузить конфигурацию плагина
+    usage: /ssreload
+    permission: bl.ss.reload
+
+permissions:
+  bl.ss:
+    description: Разрешение вызывать проверку игроков
+    default: op
+  bl.ss.bypass:
+    description: Игроки с этим пермишеном не могут быть поставлены на проверку
+    default: false
+  bl.ssstop:
+    description: Разрешение использовать команду /ssstop
+    default: op
+  bl.ssmsg:
+    description: Разрешение включать/выключать получение сообщений от проверяемых
+    default: op
+  bl.ss.setpos:
+    description: Разрешение устанавливать позицию проверки
+    default: op
+  bl.ss.reload:
+    description: Разрешение перезагружать конфигурацию плагина
+    default: op
